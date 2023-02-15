@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+
+<main class="container">
+    <div class="row">
+        <div class="column">
+            <h1>Добавить ссылку:</h1>
+            <a class="short" href="/new">
+                <img src="https://sun9-64.userapi.com/impg/1-ZNwya-NFCkKql-zoBowcGi0-tzGWpP5weiSw/XqyS8wSKpG4.jpg?size=690x380&quality=95&sign=469dc7a28cec4050e30250b11a170eb9&type=album"  alt="short">
+            </a>
+            <div class="wrapper">
+                <!-- Контент -->
+                <a href="/new" class="button">
+				<span class="button__text">
+					<span>Сделать короче</span>
+				</span>
+                </a>
+            </div>
+        </div>
+        <div class="column">
+            <h1>Ваши сокращения: </h1>
+            <div class="links" th:if="${!links.isEmpty()}">
+                <div th:each="el : ${links}">
+                    <a th:href="${el.long_link}"><h3 th:text="${el.shortLink}"></h3></a>
+                </div>
+            </div>
+            <div th:if="${links.isEmpty()}" class="block">
+                <p>Нет ссылок</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>
