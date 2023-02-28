@@ -1,0 +1,23 @@
+.input {
+	padding:  20px 15px;
+	background: #fcfcfc;
+	border-radius: 5px;
+	border:  1px solid silver;
+	outline: none;
+	display: block;
+	margin-bottom: 20px;
+	width: 300px;
+
+}
+ .main-div {
+ 	position: relative;
+ }
+
+.hint {
+	display:  none;
+	position: absolute;
+	background:  #fcfcfc;
+	border-radius:  10px;
+	border:  1px solid silver;
+	padding: 10px;
+}

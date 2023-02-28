@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_comment</title>
+    <link rel="stylesheet" href="comment.css">
+</head>
+<body>
+    <form id="comments-form" autocomplete="off">
+        <input type="text" name="name" placeholder="Введите ваше имя">
+        <textarea name="comment" placeholder="Введите сообщение"></textarea>
+        <div id="error"></div>
+        <button type="button">Отправить</button>
+    </form>
+
+    <section class="comments">
+        <h3>Комментарии (<span class="count-comm">0</span>)</h3>
+        <div id="comments">
+            Пока комментариев нет
+        </div>
+    </section>
+    <script src="comment.js"></script>
+</body>
+</html>
