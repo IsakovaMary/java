@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: #b84f09;
+    transition: color 500ms ease;
+}
+
+a:hover {
+    color: #1f1f1f;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav div.text_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.container {
+    
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background-color: #ffc106;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+ header .logo {
+    color: #222;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+ header form {
+    display: flex;
+}
+ header form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+
+  header form button {
+    float: left;
+    width: 150px;
+    padding: 10px;
+    background: #d75036;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; 
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #80300b;
+  }
+
+
+header nav a img{
+    height: 50px;
+    width: 50px;;
+}
+
+header nav div.text_menu a{
+   margin-left: 20px;
+}
+
+header nav div.search {
+}
+
+
+div.block {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid silver;
+    border-bottom-width: 2px;
+    background: #ebebeb;
+    line-height: 170%;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    width: 50%;
+    padding: 45px;
+}
+
+.column h1 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.column img {
+    border-radius: 10px;
+}
+
+.wrapper{
+	margin-top: 40px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+/* Основные стили */
+
+.button {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+}
+.button:before,
+.button:after{
+	content: '';
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #000;
+	top: -10px;
+	left: 50%;
+	z-index: 1;
+	transition: all 0.8s ease 0s;
+	margin: 0px 0px 0px -40px;
+}
+.button:before{
+	animation: rotate 20s infinite linear;
+}
+.button:after{
+	animation: rotate 25s infinite linear;
+}
+
+.button__text {
+	position: relative;
+	height: 60px;
+    width: 300px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	padding: 0px 50px;
+	border-radius: 10px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.3);
+	letter-spacing: 10px;
+	transition: all 1s ease 0s;
+	top: 0;
+	overflow: hidden;
+}
+.button__text:before,
+.button__text:after{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: #d75036;
+	transition: all 0.8s ease 0s;
+}
+.button__text:before{
+	left: 0;
+	z-index: 2;
+}
+.button__text:after{
+	right: 0;
+}
+.button__text span{
+	position: relative;
+	z-index: 2;
+    color: beige;
+}
+.button__text span::after{
+	
+    color: rgb(0, 0, 0);
+}
+
+.button:hover:before,
+.button:hover:after{
+	left: 100%;
+	opacity: 0;
+}
+
+.button:hover .button__text{
+	top: -10px;
+	color: #000;
+	transition: all 0.5s ease 0.2s;
+	box-shadow: 0 5px 0px 0 #816616;
+}
+
+.button:hover .button__text:before,
+.button:hover .button__text:after{
+	background-color: #ffc106;
+}
+
+.button:hover .button__text:before{
+	width: 100%;
+}
+
+.button:active .button__text{
+	top: -7px;
+	transition: all 0.1s ease 0s;
+	box-shadow: 0 2px 0px 0 #816616;
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.links {
+    margin-top: 30px;
+}
+.links > div {
+    width: 100%;
+    margin-bottom: 15px;
+    background: rgb(255, 243, 193);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: #ffc106;
+}
+
+
+.links > div h3{
+    color: #d75036;
+    margin: 7px 0;
+    padding-left: 10px;
+    font-size: 23px;
+}
+
+.links > div h3:hover {
+    text-decoration: none;
+    color: #201a16;
+    transition: color 500ms ease;
+}
+
+form input, form textarea{
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin-top: 20px;
+    resize: none;
+}
+
+form button, .edit-btn {
+    
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    background: #cb5e49;
+    transition: background 500ms ease;
+}
+form button:hover {
+    background: #964434;
+}
+
+
+
+.container_f {
+    width: 1100px;
+    margin: 0 auto;
+    background: #f9f0d363;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border-color: #ffc10656;
+}
+
+.footer_row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_column {
+    width: 25%;
+    text-align: start;
+    display: block;
+    margin-right: 40px;
+}
+
+.footer_column a {
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 15px;
+}
+.footer_column p {
+    margin-top: 15px;
+    font-size: 15px;
+}

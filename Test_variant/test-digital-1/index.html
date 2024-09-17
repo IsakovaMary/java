@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css">
+		<title>Бессерверная архитектура</title>
+	</head>
+	<body>
+		<button class="up"><a href="#start"><img src="img/up.png" alt="button up" width="70px"></a></button>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container _container">
+					<a href="#clients" class="header__logo" id="start">
+						Бессерверная архитектура
+					</a>
+					
+					<nav class="header__menu menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a href="#clients" class="menu__link">Сервисы</a>
+							</li>
+							<li class="menu__item">
+								<a href="#contacts" class="menu__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page__main-block main-block">
+					<div class="main-block__container _container">
+						<div class="main-block__body">
+							<h1 class="main-block__title">Serverless архитектура: обзор</h1>
+							<div class="main-block__text">
+								Просто разверни и запусти
+							</div>
+							<div class="data">
+								<p id="dateFolder" style="font-size:120%; font-weight:bold;"></p>
+											<script LANGUAGE="JavaScript">
+												temp_date = new Date();
+												day = temp_date.getDay();
+												
+												month = temp_date.getMonth() + 1;
+												year = temp_date.getFullYear();
+												if (day < 10) {
+												day = "0" + day;
+												}
+												if (month <10) {
+												month = "0" + month;
+												}
+												document.getElementById('dateFolder').innerHTML = day + "." + month + "." + year;
+												</script>
+								</div>
+							<div class="main-block__buttons">
+								<a href="#more" class="button">
+									<span class="button__text">
+										<span>Узнать больше</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="main-block__image _ibg">
+						<img src="img/mainblock/1 (2).jpg" alt="заставка-serverless">
+					</div>
+				</div>
+				<section class="page__services services">
+					<div class="services__container _container">
+						<div class="services__body">
+							<div class="services__column">
+								<div class="services__item item-service">
+									<div class="item-service__icon"><img src="img/services/01.svg" alt="Environmental Consulting"></div>
+									<h3 class="item-service__title">Экономия"</h3>
+									<div class="item-service__text">Сокращает простой ресурсов.  Не надо постоянно держать виртуальную машину под сервисы, к которым мало обращений. </div>
+								</div>
+							</div>
+							<div class="services__column">
+								<div class="services__item item-service item-service_green">
+									<div class="item-service__icon"><img src="img/services/03.svg" alt="Financial Services Consulting"></div>
+									<h3 class="item-service__title">Интеграция</h3>
+									<div class="item-service__text">«Склеивает» между собой другие сервисы: Git с внутренними программами, чат-бот в Slack с Jira и с календарем.</div>
+								</div>
+							</div>
+							<div class="services__column">
+								<div class="services__item item-service">
+									<div class="item-service__icon"><img src="img/services/02.svg" alt="Finance and consultancy"></div>
+									<h3 class="item-service__title">Скорость</h3>
+									<div class="item-service__text">"На лету" обрабатывает данные. Есть возможность: сжимать картинки, вырезать фон, менять кодировку видео, работать с датчиками IoT, выполнять математические операции.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__whoweare whoweare" id="more">
+					<div class="whoweare__container _container">
+						<div class="whoweare__header header-block">
+							<h2 class="header-block__title">Погружение в Serverless</h2>
+							<div class="header-block__sub-title">
+								Подборка материалов о развитии технологии serverless на 2021 год
+							</div>
+						</div>
+						<div class="whoweare__body">
+							<div class="whoweare__content">
+								<img src="img/1.png" alt="serverless">
+								<div class="whoweare__top_two">
+									<h2 class="whoweare__title"><span><a href="https://habr.com/ru/post/542152/">Время разобраться</a> </span></h2>
+									<div class="whoweare__text">Первый <span><a href="https://habr.com/ru/company/rebrainme/blog/565078/">ПОСТ</a> </span> из серии «Мир бессерверных вычислений»: беседуем с экспертами в разных отраслях Serverless-технологий в непринуждённой атмосфере. Интервью с Глебом Борисовым — человеком, который создаёт инструменты для запуска функций в Yandex.Cloud. О важнейшем элементе бессерверной архитектуры просто и увлекательно.</div>
+								</div>
+							</div>
+						</div>
+						<div class="whoweare__body">
+							<div class="whoweare__content">
+								<div class="whoweare__top_two">
+									<h2 class="whoweare__title"><span><a href="https://habr.com/ru/company/rebrainme/blog/565078/">Serverless глазами инженера: “используешь, перестаешь программировать, становишься оператором Амазона”</a> </span></h2>
+									<div class="whoweare__text">Гость 	<span><a href="https://habr.com/ru/post/571206/"> ЭТОГО </a> </span> интервью работает на американском рынке больше 10 лет: в бэкенде, фулстеке, был тимлидом. По его мнению, хайп вокруг Serverless привёдет к тому, что мы окажемся в добровольном рабстве у Amazon и Google. Что с этим делать, есть ли какая-то возможность этого избежать?</div>
+								</div>
+							</div>
+							<div class="whoweare__content">
+								<div class="whoweare__top_two">
+									<h2 class="whoweare__title"><span><a href="https://habr.com/ru/post/571206/">Бессерверные БД: зачем переводить Stateful-сервис в Serverless</a> </span></h2>
+									<div class="whoweare__text">Всё больше проектов обращается к бессерверным базам данных. Предлагаю почитать об особенностях и применении двух типов СУБД: адаптирующих популярные базы данных под бессерверное использование и разработанных под бессерверный режим. В 	<span><a href="https://habr.com/ru/post/571206/"> СТАТЬЕ </a> </span> описывается опыт компаний в облачной инфраструктуре и в переходе на бессерверные СУБД.</div>
+								</div>
+							</div>
+						</div>
+						<div class="whoweare__body">
+							<div class="whoweare__content">
+								<div class="whoweare__top">
+									<h2 class="whoweare__title"><span><a href="https://habr.com/ru/post/557004/">Облачные API Gateway: зачем нужны подобные сервисы и чем они отличаются у разных платформ</a> </span></h2>
+									<div class="whoweare__text">API Gateway выполняет, принимает, обрабатывает и распределяет запросы, контролирует трафик, осуществляет мониторинг и контроль доступа. Автор предлагает рассмотреть реализацию API Gateway на облачных платформах. В <span><a href="https://habr.com/ru/post/557004/">  СТАТЬЕ </a> </span>  — детальный разбор: что это такое, как и кому упрощает жизнь, где используется.</div>
+								</div>
+								<img src="img/whoweare/2.jpg" alt="API Gateway">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__practice practice">
+					<div class="practice__container _container">
+						<div class="practice__header header-block">
+							<h2 class="header-block__title">Преимущества бессерверной архитектуры</h2>
+							<div class="header-block__sub-title">
+								Обладая этими характеристиками, бессерверная архитектура предлагает следующие преимущества:
+							</div>
+						</div>
+						<div class="practice__body">
+							<div class="practice__column">
+								<article class="practice__item item-practice">
+									<div class="item-practice__content">
+										<a href="" class="item-practice__link">
+											<h4 class="item-practice__title">Развернуть и запустить</h4>
+										</a>
+										<div class="item-practice__text">
+											 Ресурсы инфраструктуры управляются поставщиком облака. 
+											Таким образом, внутренняя ИТ-служба может сосредоточиться на бизнес-сценарии использования 
+											программных приложений, а не на управлении базовым оборудованием. Функции позволяют пользователям развертывать сборки приложений и файлы конфигурации, необходимые для предоставления требуемых аппаратных ресурсов.
+										</div>
+									</div>
+									<a href="" class="item-practice__image _ibg">
+										<img src="img/practice/01.jpg" alt="A single source of truth">
+									</a>
+								</article>
+							</div>
+							<div class="practice__column">
+								<article class="practice__item item-practice">
+									<div class="item-practice__content">
+										<a href="" class="item-practice__link">
+											<h4 class="item-practice__title">Отказоустойчивость</h4>
+										</a>
+										<div class="item-practice__text">
+											  Поскольку кодирование бессерверных приложений логически отделено от базовой инфраструктуры,
+											 сбои оборудования имеют минимальное влияние на процесс разработки программного обеспечения.
+											  Пользователи не обязаны самостоятельно управлять приложениями.
+										</div>
+									</div>
+									<a href="" class="item-practice__image _ibg">
+										<img src="img/practice/02.jpg" alt="Fastest way to organize">
+									</a>
+								</article>
+							</div>
+							<div class="practice__column">
+								<article class="practice__item item-practice">
+									<div class="item-practice__content">
+										<a href="" class="item-practice__link">
+											<h4 class="item-practice__title">Низкие эксплуатационные расходы</h4>
+										</a>
+										<div class="item-practice__text">
+											В задачах инфраструктуры и управления операциями - управляются поставщиками облачных серверов, позволяя организации сосредоточить
+											 свои усилия на создание программных функций. Приложения выпускаются быстрее, что приводит к более 
+											 быстрой обратной связи с конечными пользователями и, следовательно, к дальнейшим улучшениям в течение следующих циклов выпуска программного обеспечения.
+										</div>
+									</div>
+									<a href="" class="item-practice__image _ibg">
+										<img src="img/practice/04.jpg" alt="Fastest way to take action">
+									</a>
+								</article>
+							</div>
+							<div class="practice__column">
+								<article class="practice__item item-practice">
+									<div class="item-practice__content">
+										<a href="" class="item-practice__link">
+											<h4 class="item-practice__title">Оптимизированный биллинг на основе использования. </h4>
+										</a>
+										<div class="item-practice__text">
+											Модель выставления счетов с оплатой по мере использования особенно хорошо подходит для малых и средних (SMB) организаций, которым не хватает
+											 капитала для создания локальных центров обработки данных и управления ими. Текущая модель OpEx дополнительно оптимизирована, функции настроены против 
+											 потенциального чрезмерного выделения ресурсов и недостаточного использования ресурсов. 
+										</div>
+									</div>
+									<a href="" class="item-practice__image _ibg">
+										<img src="img/practice/03.jpg" alt="Work better together">
+									</a>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__whoweare whoweare">
+					<div class="whoweare__container _container">
+						<div class="whoweare__header header-block">
+							<h2 class="header-block__title">Когда следует избегать бессерверной архитектуры</h2>
+						</div>
+						<div class="whoweare__body">
+							
+							<ol>
+								<li><div class="whoweare__content">
+									<div class="whoweare__top_ol">
+										<h2 class="whoweare__title"><span>Приложения с фиксированной архитектурой. </span></h2>
+										<div class="whoweare__text"> Программное обеспечение, которое требует явной поддержки и неизменности базовой архитектуры. 
+											Сценарии использования чувствительного к безопасности и автономного программного обеспечения в оборонной и финансовой отраслях часто сталкиваются с этими 
+											требованиями, чтобы обеспечить высокую надежность приложений.</div>
+									</div>
+									</div>
+								</li>
+								<li><div class="whoweare__content">
+									<div class="whoweare__top_ol">
+										<h2 class="whoweare__title"><span>Жестко контролируемая среда. </span></h2>
+										<div class="whoweare__text"> Сценарии использования, требующие жесткого контроля над оборудованием и нижними уровнями ИТ-сети, например, установка определенных компонентов, исправлений и изменение конфигурации жесткого кодирования.</div>
+									</div>
+									</div></li>
+									<li><div class="whoweare__content">
+									<div class="whoweare__top_ol">
+										<h2 class="whoweare__title"><span>Приложения с низкой задержкой.  </span></h2>
+										<div class="whoweare__text"> Хотя функции бессерверной архитектуры предназначены для обеспечения скорости 
+											на системном уровне, не все входящие запросы и транзакционные операции обрабатываются эффективно.</div>
+									</div>
+									</div></li>
+								<li><div class="whoweare__content">
+										<div class="whoweare__top_ol">
+											<h2 class="whoweare__title"><span>Предварительно перенесенные приложения.  </span></h2>
+											<div class="whoweare__text"> Для устаревших приложений, которым еще предстоит перейти в облачную среду, использование
+												 бессерверной архитектуры предлагает ограниченную ценность для бизнеса, поскольку внутренняя ИТ-служба должна управлять
+												  оборудованием независимо от выбора архитектуры приложения.</div>
+										</div>
+									</div></li>
+								<li><div class="whoweare__content">
+										<div class="whoweare__top_ol">
+											<h2 class="whoweare__title"><span>Ограничения производительности приложения.  </span></h2>
+											<div class="whoweare__text"> Бессерверные функции сталкиваются с ограничениями с точки зрения емкости, скорости и времени выполнения. 
+												Производительность бессерверных функций должна соответствовать или превышать ограничения емкости бессерверных сервисов, таких как тайм-аут AWS Gateway.</div>
+											</div>
+								</div></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				
+
+				<section class="page__subscribe subscribe">
+					<div class="subscribe__container _container">
+						<div class="subscribe__body">
+							<h4 class="subscribe__title">Заключение</h4>
+							<div class="header-block__sub-title-end">
+								Согласно недавнему исследованию, в настоящее время 98% организаций используют облачные сервисы. Это доказывает, что облачная
+								 архитектура - одна из главных особенностей веб-разработки. <br> Бессерверная архитектура предлагает несколько новых функций в процессе развития веб-технологий. 
+								 Теперь люди используют бессерверные вычисления, бессерверные бухгалтерские решения, быстрее  обеспечивают экономически эффективные решения, обслуживая делегированные проблемы.
+
+								 <br>Благодаря бессерверной архитектуре, организации могут понимать SaaS, Laas, PaaS и т. Д. Бессерверная архитектура предлагает веб-приложения без необходимости думать о серверах. 
+								Облачная структура может открываться в любом месте, где есть доступ в Интернет. Даже можно хранить тонны информации без использования выделенных серверов.
+								
+								<br>В нынешней ситуации большинство организаций без колебаний используют эту облачную систему. <br>Она полностью изменила веб-технологии и концепцию реального управления серверами.</p>
+						
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="page__clients clients" id="clients">
+					<div class="clients__container _container">
+						<div class="clients__items">
+							<div class="clients__item">
+								<a href="https://cloud.yandex.ru/services/functions"><img src="img/clients/yandex.png" alt="yandex cloud"></a>
+							</div>
+							<div class="clients__item">
+								<a href="https://aws.amazon.com/ru/lambda/"><img src="img/clients/aws.png" alt="aws"></a>
+							</div>
+							<div class="clients__item">
+								<a href="https://cloud.google.com/functions"><img src="img/clients/google.png" alt="google cloud"></a>
+							</div>
+							<div class="clients__item">
+								<a href="https://azure.microsoft.com/ru-ru/services/functions/"><img src="img/clients/azure.gif" alt="azure functions"></a>
+							</div>
+							<div class="clients__item">
+								<a href="https://fnproject.io/"><img src="img/clients/fn.png" alt="fn oracle"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="page__contact contact">
+					<div class="contact__container _container">
+						<div class="contact__body">
+							
+							<div class="contact__content" id="contacts">
+								<h4 class="contact__title">Быстрая обратная связь</h4>
+								<div class="contact__text">Хочу в Школу Frontend-разработки Digital Design</div>
+							</div>
+							<a href="https://api.whatsapp.com/send?phone=79533540075" class="contact__button">Написать мне</a>
+						</div>
+					</div>
+					
+					
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__top">
+					<div class="footer__main _container">
+						<div class="footer__row">
+							<div class="footer__column">
+								<nav class="footer__menu menu-footer">
+									<img src="img/logo-remove.png" alt="logo-fox" width="200px">
+								</nav>
+							</div>
+							<div class="footer__column">
+								<div class="footer__label">Мария Набат</div>
+								<div class="footer__contacts contacts-footer">
+									<a href="tel:79533540075" class="contacts-footer__item contacts-footer__item_phone">+7(953) 354-0075</a>
+									<a href="https://yandex.ru/maps/-/CCUBA-Xx3D" class="contacts-footer__item contacts-footer__item_map">Санкт-Петербург, ул. Орбели</a>
+									<a href="mailto:nukova.maria@mail.ru" class="contacts-footer__item contacts-footer__item_email">nukova.maria@mail.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script  src="js/script.js"></script>
+	</body>
+</html>

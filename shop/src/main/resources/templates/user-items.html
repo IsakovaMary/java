@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары пользователя</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+<main class="container">
+    <div class="items" th:if="${!items.isEmpty()}">
+        <div th:each="el : ${items}">
+            <img th:src="${el.image}" th:alt="${el.title}">
+            <h3 th:text="${el.title}"></h3>
+            <p th:text="${el.info}"></p>
+            <span th:text="${el.price} + '$'"></span>
+        </div>
+    </div>
+    <br>
+    <form method="post" th:action="@{'/admin/user-'+${user.id}+'/delete'}">
+        <button type="submit" class="edit-btn">Удалить пользователя</button>
+    </form>
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>

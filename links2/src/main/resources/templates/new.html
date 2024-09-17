@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Главная страница</title>
+  <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+
+<main class="container">
+  <div class="form">
+    <h1>Добавить ссылку:</h1>
+    <form  th:method="post" th:action="@{/new}">
+      <input type="text" name="long_link" placeholder="Введите длинную ссылку" ><br>
+        <p style="color:red" th:text="${message}"></p>
+      <input type="text" name="shortLink" placeholder="Введите короткую ссылку" ><br>
+        <p style="color:red" th:text="${message1}"></p>
+      <button type="submit">Добавить</button>
+    </form>
+  </div>
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>

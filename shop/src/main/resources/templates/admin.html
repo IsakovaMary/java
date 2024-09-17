@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель админа</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+<main class="container">
+    <span sec:authorize="hasAuthority('ADMIN')">
+    <div class="users" th:if="${!users.isEmpty()}">
+        <div th:each="el : ${users}">
+            <h3 >Пользователь: <b th:text="${el.username}"></b></h3>
+            <p> Email: <b th:text="${el.email}"></b></p>
+            <p>Роль на сайте: <b th:text="${el.roles}"></b></p>
+            <br><br>
+            <button><a th:href="'/admin/user-' + ${el.id} " class="edit-btn">Посмотреть товары</a></button>
+        </div>
+    </div>
+    <div th:if="${users.isEmpty()}" class="block">
+        <p>Нет авторизованных пользователей</p>
+    </div>
+    </span>
+    <span sec:authorize="!hasAuthority('ADMIN')">
+        <div class="not-admin">
+            <h1>Страница администратора</h1>
+            <br>
+            <p>Доступ для вашей роли запрещен</p>
+        </div>
+    </span>
+
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Конвертер</string>
+    <string name="value">Введите значение</string>
+    <string name="ton">Количество тонн</string>
+    <string name="kg">Количество килограмм</string>
+    <string name="gram">Количество грамм</string>
+
+
+</resources>
